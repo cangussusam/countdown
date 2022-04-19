@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown App</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header__title">Countdown</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <div class="date container">
+                <form class="date__form" id="form">
+                    <label for="event__name" class="date__label">Nome do Evento:</label>
+                    <input type="text" class="date__input" id="event__name">
+                    
+                    <label for="event__date" class="date__label">Data:</label>
+                    <input type="date" class="date__input" id="event__date">
+                    
+                        <label for="event__hours" class="date__label" id="hover__label">*Horas:
+                            <span class="date__span">Valor 'Horas' opcional. Valor por padrão definido em 00:00</span>
+                        </label>
+                        <input type="time" class="date__input" id="event__hours">
+
+                </form>
+
+                <div class="date__submit">
+                    <button class="date__button" form="form">Cadastrar Evento</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="timer">
+            <div class="timer container">
+                <div class="timer__div">
+                    <p class="timer__paragraph" id="timer__day">00</p>
+                    <p class="timer__title">days</p>
+                </div>
+                <div class="timer__div">
+                    <p class="timer__paragraph" id="timer__hour">00</p>
+                    <p class="timer__title">hours</p>
+                </div>
+                <div class="timer__div">
+                    <p class="timer__paragraph" id="timer__minute">00</p>
+                    <p class="timer__title">minutes</p>
+                </div>
+                <div class="timer__div">
+                    <p class="timer__paragraph" id="timer__second">00</p>
+                    <p class="timer__title">seconds</p>
+                </div>
+            </div>
+
+            <div>
+                <p class="timer__name"></p>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/indexeddb/ConnectionFactory.js"></script>
+    <script src="scripts/indexeddb/TimerDAO.js"></script>
+    
+</body>
+</html>
