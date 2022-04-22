@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown App</title>
 
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base/reset.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/date.css">
+    <link rel="stylesheet" href="assets/css/timer.css">
+    <link rel="stylesheet" href="assets/css/lists.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
@@ -19,7 +26,7 @@
 
     <main>
 
-        <section>
+        <section class="date__section">
             <div class="date container">
                 <form class="date__form" id="form">
                     <label for="event__name" class="date__label">Nome do Evento:</label>
@@ -42,40 +49,68 @@
             </div>
         </section>
 
-        <section class="timer">
-            <div class="timer container">
-                <div class="timer__div">
-                    <p class="timer__paragraph" id="timer__day">00</p>
-                    <p class="timer__title">days</p>
-                </div>
-                <div class="timer__div">
-                    <p class="timer__paragraph" id="timer__hour">00</p>
-                    <p class="timer__title">hours</p>
-                </div>
-                <div class="timer__div">
-                    <p class="timer__paragraph" id="timer__minute">00</p>
-                    <p class="timer__title">minutes</p>
-                </div>
-                <div class="timer__div">
-                    <p class="timer__paragraph" id="timer__second">00</p>
-                    <p class="timer__title">seconds</p>
+        <section class="timer" id="opcional0">
+            <div class="timer__complete">
+                <div class="timer container">
+                    <div class="timer__div">
+                        <p class="timer__paragraph" id="timer__day">00</p>
+                        <p class="timer__title">days</p>
+                    </div>
+                    <div class="timer__div">
+                        <p class="timer__paragraph" id="timer__hour">00</p>
+                        <p class="timer__title">hours</p>
+                    </div>
+                    <div class="timer__div">
+                        <p class="timer__paragraph" id="timer__minute">00</p>
+                        <p class="timer__title">minutes</p>
+                    </div>
+                    <div class="timer__div">
+                        <p class="timer__paragraph" id="timer__second">00</p>
+                        <p class="timer__title">seconds</p>
+                    </div>
                 </div>
             </div>
-
+            
             <div>
                 <p class="timer__name"></p>
             </div>
         </section>
 
+        <section class="timer__opcional">
 
+        </section>
+
+        <section class="lists">
+            <div class="lists container">
+                <div class="lists__div">
+                    <ul class="lists__ul"></ul>
+                </div>
+
+                <div class="add__timer">
+                    <p>Adicionar Timer</p>
+                    <div class="button_plus add__button"></div>
+                </div>
+
+            </div>
+        </section>
+
+     
 
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="foote"></footer>
 
-    <script src="scripts/main.js"></script>
-    <script src="scripts/indexeddb/ConnectionFactory.js"></script>
-    <script src="scripts/indexeddb/TimerDAO.js"></script>
+    <script src="scripts/app/indexeddb/ConnectionFactory.js"></script>
+    <script src="scripts/app/indexeddb/TimerDAO.js"></script>
+    <script src="scripts/app/controllers/Validation.js"></script>
+    <script src="scripts/app/controllers/CreateList.js"></script>
+    <script src="scripts/app/controllers/Timer.js"></script>
+    <script src="scripts/app/controllers/Countdown.js"></script>
+    <script src="scripts/app/controllers/ShowCountdown.js"></script>
+    <script src="scripts/app/main.js"></script>
+    <script src="scripts/app/viewers/viewTimer.js"></script>
+    <script src="scripts/app/viewers/removeList.js"></script>
+    <script src="scripts/app/viewers/viewNewTimer.js"></script>
     
 </body>
 </html>

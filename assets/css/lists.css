@@ -1,0 +1,38 @@
+.lists{
+    text-align: center;
+}
+
+.lists.container{
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem;
+    background: #fdfdfd;
+    border-radius: 10px;
+}
+
+.lists__div-li{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.lists__input{
+    width: 1rem;
+    margin-left: 1rem;
+}
+
+.lists__li:hover{
+    color: grey;
+    cursor: pointer;
+}
+
+.gg-trash{
+    margin: 0 1rem;
+    
+}
+
+.gg-trash:hover{
+    
+    cursor: pointer;
+}

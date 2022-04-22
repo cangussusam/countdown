@@ -1,0 +1,33 @@
+
+.timer{
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.timer.container{
+    margin: 2rem;
+    display: inline-flex;
+    flex-direction: row;   
+    background: #096B72;
+    border-radius: 3px;
+}
+
+.timer__complete{
+    display: flex;
+    justify-content: center;
+}
+
+.timer__div{
+    margin: 1rem;
+    text-align: center;
+}
+
+.timer__paragraph{
+    font-size: 3rem;
+    color:#fdfdfd;
+
+}
+
+.timer__name{
+    color: #fdfdfd;
+}

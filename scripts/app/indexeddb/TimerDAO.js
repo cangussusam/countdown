@@ -20,7 +20,6 @@ class TimerDAO {
 
             request.onsuccess = e => {
 
-                console.log(`Sucesso em adicionar '${timer}'`)
                 resolve()
             }
             
@@ -51,7 +50,7 @@ class TimerDAO {
                 if(actualIndex) {
                     
                     let data = actualIndex.value
-                    timers.push(data)
+                    timers.push(new Timer(data.name, data.date, data.hours))
 
                     actualIndex.continue()
                 }else{
@@ -81,6 +80,31 @@ class TimerDAO {
             request.onsuccess = e => {
 
                 console.log('Remoção realizada com sucesso.')
+                resolve()
+            }
+
+            request.onerror = e => {
+
+                console.log(e.target.error)
+                console.log('Falha na remoção')
+                reject()
+            }
+        })
+    }
+
+    delete(timer) {
+        
+        return new Promise((resolve, reject) => {
+
+            let request = this.#connection
+                .transaction(this.#store, 'readwrite')
+                .objectStore(this.#store)
+                .delete(timer)
+
+               
+            request.onsuccess = e => {
+
+                console.log('Delete realizada com sucesso.')
                 resolve()
             }
 
